@@ -40,8 +40,9 @@ def process_json(json_string):
         on_false = task["On_false"]
         parameters = task["Parameters"]
         if command == "GoToPage":
-            print("Open page " + parameters["Url"])
-            browser.goto(url=parameters["Url"])
+            base_url = parameters["Url"]
+            print("Open page " + base_url)
+            browser.goto(url=base_url)
         elif command == "ClickOnSelector":
             print("click selector " + parameters["Selector"])
             selector_text = parameters["Selector"]
@@ -51,7 +52,7 @@ def process_json(json_string):
             find_text = parameters["Key_input"]
             element = page.query_selector(f'text="{find_text}"')
             href = element.get_attribute("href")
-            href = "https://www.travsport.se" + href
+            href = base_url + href
         elif command == "SaveLinkAs":
             print("SaveLinkAs")
             file_name = find_text + ".pdf"
