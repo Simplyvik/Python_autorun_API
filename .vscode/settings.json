@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "c:/Users/simon/.robocorp-code/Python_autorun_API/Python_autorun_API_get_file_from_page/."
+    ]
+}

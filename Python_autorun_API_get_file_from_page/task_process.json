@@ -1,0 +1,98 @@
+{
+    "Proc_id": 7852,
+    "Proc_name": "Proposionshäfte",
+    "Proc_description": "Ladda ner en fil från webben",
+    "Proc_type": "single_process",
+    "Process_group_id": 0,
+    "Process_group_name": "Nothing",
+    "Schedule": [
+        "2023-08-08T09:00:00.000Z"
+    ],
+    "Tasklist": [
+        {
+            "Task_ID": 1,
+            "Title": "Gå till startsida",
+            "Command_libary": "Robot",
+            "Command": "GoToPage",
+            "Command_options": "none",
+            "Delay_start": 0,
+            "Order": 0,
+            "On_true": "NextStep",
+            "On_false": -1,
+            "Parameters": {
+                "Url": "https://www.travsport.se/",
+                "Selector": "none",
+                "Action": "execute",
+                "Key_input": ""
+            }
+        },
+        {
+            "Task_ID": 2,
+            "Title": "Klicka i menyn på Sport",
+            "Command_libary": "Robot",
+            "Command": "ClickOnSelector",
+            "Command_options": "none",
+            "Delay_start": 0,
+            "Order": 0,
+            "On_true": "NextStep",
+            "On_false": -1,
+            "Parameters": {
+                "Url": "",
+                "Selector": "Sport",
+                "Action": "click",
+                "Key_input": ""
+            }
+        },
+        {
+            "Task_ID": 3,
+            "Title": "Klicka i undermenyn på Propositionshäfte",
+            "Command_libary": "Robot",
+            "Command": "ClickOnSelector",
+            "Command_options": "none",
+            "Delay_start": 0,
+            "Order": 0,
+            "On_true": "NextStep",
+            "On_false": -1,
+            "Parameters": {
+                "Url": "",
+                "Selector": "Propositionshäfte",
+                "Action": "click",
+                "Key_input": ""
+            }
+        },
+        {
+            "Task_ID": 4,
+            "Title": "Hitta Propositioner augusti 2023",
+            "Command_libary": "Robot",
+            "Command": "FindSelector",
+            "Command_options": "none",
+            "Delay_start": 0,
+            "Order": 0,
+            "On_true": "NextStep",
+            "On_false": -1,
+            "Parameters": {
+                "Url": "",
+                "Selector": "",
+                "Action": "find",
+                "Key_input": "Propositioner oktober 2023"
+            }
+        },
+        {
+            "Task_ID": 5,
+            "Title": "Ladda ner dokument på länken Hitta Propositioner augusti 2023",
+            "Command_libary": "Robot",
+            "Command": "SaveLinkAs",
+            "Command_options": "none",
+            "Delay_start": 0,
+            "Order": 0,
+            "On_true": "NextStep",
+            "On_false": -1,
+            "Parameters": {
+                "Url": "",
+                "Selector": "Some name of this selector",
+                "Action": "right_click_save_link_as",
+                "Key_input": ""
+            }
+        }
+    ]
+}
