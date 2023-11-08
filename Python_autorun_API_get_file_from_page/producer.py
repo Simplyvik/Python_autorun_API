@@ -4,12 +4,11 @@ from robocorp import browser, workitems
 import requests
 import os
 
-item = None
-
 
 @task
 def producer_store_object_for_response():
     # Get input data from wi or file
+    item = None
     if os.getenv("CONTROL_ROOM"):
         item = workitems.inputs.current
         json_string_data = item.payload
